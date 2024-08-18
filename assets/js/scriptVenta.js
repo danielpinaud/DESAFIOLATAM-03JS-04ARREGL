@@ -1,10 +1,10 @@
-const propiedadesAlquiler =
+const propiedadesVenta =
 [ 
    {
-      nombre: 'caulin',
-      src: './assets/img/caulin.jpg',
+      nombre: 'ancud',
+      src: './assets/img/urco.jpg',
       descripcion: 'Una hermosa casa junto a la playa con vista al océano.',
-      ubicacion: 'caulin, chile',
+      ubicacion: 'ancud, chile',
       habitaciones: 1,
       banos: 1,
       costo: 1,
@@ -12,10 +12,10 @@ const propiedadesAlquiler =
       pets: true
     },
     {
-      nombre: 'caulin 2',
-      src: './assets/img/caulin.jpg',
+      nombre: 'ancud 2',
+      src: './assets/img/urco.jpg',
       descripcion: 'Una hermosa casa junto a la playa con vista al océano.',
-      ubicacion: 'caulin, chile',
+      ubicacion: 'ancud, chile',
       habitaciones: 2,
       banos: 2,
       costo: 2,
@@ -23,10 +23,10 @@ const propiedadesAlquiler =
       pets: false
     },
     {
-      nombre: 'caulin 3',
-      src: './assets/img/caulin.jpg',
+      nombre: 'ancud 3',
+      src: './assets/img/urco.jpg',
       descripcion: 'Una hermosa casa junto a la playa con vista al océano.',
-      ubicacion: 'caulin, chile',
+      ubicacion: 'ancud, chile',
       habitaciones: 3,
       banos: 3,
       costo: 3,
@@ -34,10 +34,10 @@ const propiedadesAlquiler =
       pets: true
     },
     {
-      nombre: 'caulin 4',
-      src: './assets/img/caulin.jpg',
+      nombre: 'ancud 4',
+      src: './assets/img/urco.jpg',
       descripcion: 'Una hermosa casa junto a la playa con vista al océano.',
-      ubicacion: 'caulin, chile',
+      ubicacion: 'ancud, chile',
       habitaciones: 4,
       banos: 4,
       costo: 4,
@@ -48,25 +48,25 @@ const propiedadesAlquiler =
 
 
 
-function mostrarAlquiler()
+function mostrarVenta()
 {
-   let propiedad_Alquiler = document.getElementById('alquilerhtml')
+   let propiedad_Venta = document.getElementById('ventahtml')
    let card_html = ``
-   for(const p_alquiler of propiedadesAlquiler)
+   for(const p_venta of propiedadesVenta)
    {
       card_html +=
       `
          <div class="col-md-4 mb-4">
             <div class="card">
-                  <img src=                               "${p_alquiler.src}" class="card-img-top" alt="del departamento"/>
+                  <img src=                               "${p_venta.src}" class="card-img-top" alt="del departamento"/>
                <div class="card-body">
-                  <h5 class="card-title">                  ${p_alquiler.nombre}      </h5>
-                  <p class="card-text">                    ${p_alquiler.descripcion} </p>
-                  <p> <i class="fas fa-map-marker-alt"></i>${p_alquiler.ubicacion}  </p>
-                  <p  <i class="fas fa-bed"></i>           ${p_alquiler.habitaciones} |<i class="fas fa-bath"></i> ${p_alquiler.banos} </p>
-                  <p> <i class="fas fa-dollar-sign"> </i>  ${p_alquiler.costo}</p>
-      ` 
-                   if (p_alquiler.smoke)
+                  <h5 class="card-title">                  ${p_venta.nombre}      </h5>
+                  <p class="card-text">                    ${p_venta.descripcion} </p>
+                  <p> <i class="fas fa-map-marker-alt"></i>${p_venta.ubicacion}  </p>
+                  <p  <i class="fas fa-bed"></i>           ${p_venta.habitaciones} |<i class="fas fa-bath"></i> ${p_venta.banos} </p>
+                  <p> <i class="fas fa-dollar-sign"> </i>  ${p_venta.costo}</p>
+       `
+                  if (p_venta.smoke)
                      {
                         card_html +=
                         ` 
@@ -80,7 +80,7 @@ function mostrarAlquiler()
                           <p class="text-danger"><i class="fas fa-smoking-ban"></i> No se permite fumar</p>
                          ` 
                      }
-                  if (p_alquiler.pets)
+                  if (p_venta.pets)
                     {
                      card_html += 
                        `
@@ -101,13 +101,13 @@ function mostrarAlquiler()
              </div>
               ` 
  }
-            
-      propiedad_Alquiler.innerHTML = 
+
+   propiedad_Venta.innerHTML = 
    `
-      <h2>Propiedades en alquiler</h2>
+      <h2>Propiedades en Venta</h2>
       <div class="row">
    ` + card_html + `</div>`
 
 }
 
-mostrarAlquiler();
+mostrarVenta();
